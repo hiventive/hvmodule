@@ -8,7 +8,7 @@
  */
 
 #include <iostream>
-#include <base_module.h>
+#include <base-module/base-module.h>
 #include <gtest/gtest.h>
 #include <systemc>
 

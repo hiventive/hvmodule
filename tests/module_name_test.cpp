@@ -8,10 +8,10 @@
  */
 
 #include <iostream>
-#include <module.h>
+#include <module/module.h>
 #include <gtest/gtest.h>
 #include <systemc>
-#include "module_name.h"
+#include "module/name.h"
 
 using namespace ::hv::common;
 using namespace ::hv::module;

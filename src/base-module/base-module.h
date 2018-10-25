@@ -10,7 +10,6 @@
 #ifndef HV_BASEMODULE_H
 #define HV_BASEMODULE_H
 
-#include <cstdlib>
 #include <iostream>
 #include <systemc>
 

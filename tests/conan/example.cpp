@@ -1,8 +1,6 @@
-#include <base_module.h>
-#include <module.h>
 #include <systemc>
-#include <cstdlib>
 #include <iostream>
+#include <hv/module.h>
 
 using namespace hv::module;
 

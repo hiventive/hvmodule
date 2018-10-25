@@ -1,10 +1,10 @@
 # Settings
 
 project:
-  name: Module
-  version: 0.2.0
+  name: HVModule
+  version: 0.3.0
 
 conan:
-  name: module
+  name: hvmodule
   channel: testing
   username: hiventive

@@ -7,7 +7,7 @@
  * @brief Register-style module
  */
 #include <iostream>
-#include <module.h>
+#include <module/module.h>
 #include <gtest/gtest.h>
 #include <systemc>
 

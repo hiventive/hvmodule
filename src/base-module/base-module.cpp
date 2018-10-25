@@ -7,7 +7,8 @@
  * @brief Base module
  */
 
-#include "base_module.h"
+#include "base-module.h"
+
 namespace hv {
 namespace module {
 

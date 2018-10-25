@@ -1,9 +1,8 @@
 from conans import ConanFile, CMake, tools
-from conans.util import files
 import yaml
 
-class ModuleConan(ConanFile):
-    name = "module"
+class HVModuleConan(ConanFile):
+    name = str(yaml.load(tools.load("settings.yml"))['conan']['name'])
     version = str(yaml.load(tools.load("settings.yml"))['project']['version'])
     license = "MIT"
     author = "Hiventive"
@@ -13,11 +12,12 @@ class ModuleConan(ConanFile):
     options = {"shared": [True, False], "fPIC": [True, False], "fPIE": [True, False]}
     default_options = "shared=False", "fPIC=False", "fPIE=False"
     generators = "cmake"
+    no_copy_source = True # TODO: remove that (GLOB_RECURSIVE issue)
     exports = "settings.yml"
-    exports_sources = "src/*", "CMakeLists.txt"
-    requires = "gtest/1.8.0@bincrafters/stable", \
-               "common/0.2.0@hiventive/testing", \
-               "communication/0.1.0@hiventive/testing"
+    exports_sources = "src/*", "CMakeLists.txt", "cmake/*"
+    requires = "gtest/1.8.0@hiventive/stable", \
+               "hvcommon/0.3.0@hiventive/testing", \
+               "hvcommunication/0.2.0@hiventive/testing"
 
     def _configure_cmake(self):
         cmake = CMake(self)
@@ -33,9 +33,7 @@ class ModuleConan(ConanFile):
     def package(self):
         cmake = self._configure_cmake()
         cmake.install()
-        self.copy("HVModule", dst="include", src="src")
-        self.copy("*.h", dst="include", src="src") # FIXME
-        self.copy("*.hpp", dst="include", src="src")
 
     def package_info(self):
-        self.cpp_info.libs = ["module"]
+        self.cpp_info.libs = ["hvmodule"]
+

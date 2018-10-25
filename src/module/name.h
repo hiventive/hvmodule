@@ -13,8 +13,8 @@
 #ifndef HV_MODULE_NAME_H_
 #define HV_MODULE_NAME_H_
 
-#include <HVCommon>
 #include <systemc>
+#include <hv/common.h>
 
 namespace hv {
 namespace module {
