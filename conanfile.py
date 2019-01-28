@@ -16,8 +16,8 @@ class HVModuleConan(ConanFile):
     exports = "settings.yml"
     exports_sources = "src/*", "CMakeLists.txt", "cmake/*"
     requires = "gtest/1.8.0@hiventive/stable", \
-               "hvcommon/0.3.0@hiventive/testing", \
-               "hvcommunication/0.2.0@hiventive/testing"
+               "hvcommon/[>=0.3.0 <1]@hiventive/testing", \
+               "hvcommunication/[>=0.2.0 <1]@hiventive/testing"
 
     def _configure_cmake(self):
         cmake = CMake(self)
