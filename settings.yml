@@ -1,0 +1,10 @@
+# Settings
+
+project:
+  name: Module
+  version: 0.2.0
+
+conan:
+  name: module
+  channel: testing
+  username: hiventive

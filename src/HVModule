@@ -1,0 +1,19 @@
+/**
+ * @file HVModule
+ * @author Benjamin Barrois <benjamin.barrois@hiventive.com>
+ * @date Jul, 2018
+ * @copyright Copyright (C) 2018, Hiventive.
+ *
+ * @brief Hiventive Module
+ *
+ * Usage: #include <HVModule>
+ */
+ 
+ #ifndef HV_MODULE_INC_H_
+ #define HV_MODULE_INC_H_
+ 
+ #include "module_name.h"
+ #include "base_module.h"
+ #include "module.h"
+ 
+ #endif
